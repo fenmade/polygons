@@ -17,6 +17,19 @@ function makePolygon(sides) {
 	return node;
 }
 
+function wrapClass(className, node) {
+	let el = document.createElement("div");
+	el.classList.add(className);
+	el.appendChild(node);
+
+	return el;
+}
+
+function animate(node) {
+	return wrapClass("bouncing", wrapClass("spinning",
+		node));
+}
+
 /* testing */
 
-playArea.appendChild(makePolygon(3));
+playArea.appendChild(animate(makePolygon(3)));
