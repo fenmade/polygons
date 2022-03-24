@@ -43,7 +43,7 @@ body {
 }
 
 .spinning {
-	animation: spinning linear 30s;
+	animation: spinning infinite linear 30s;
 }
 
 .bouncing {
